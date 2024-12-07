@@ -5,7 +5,7 @@ import { readFileFromPath } from "../utils/file";
  * Task : match both number arrays lowest value in array 1 to lowest value in arra2 for all the array elements. Calculate the distance between both numbers and store it in an array.
  * Afterwards sum up all the distances to a total
  *
- *
+ * Run : npm run day1
  */
 
 function buildInputArrays(fileContent: string): [Array<number>, Array<number>] {
