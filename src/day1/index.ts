@@ -29,6 +29,7 @@ function getDistanceBetweenEachNumber(
 	for (let i = 0; i < array.length; i++) {
 		const value1 = array[i];
 		const value2 = array2[i];
+		//the description was not clear if value 1 is always smaller then value 2 so for safty i just check to get always a positive number
 		if (value1 > value2) {
 			result.push(value1 - value2);
 		} else {
