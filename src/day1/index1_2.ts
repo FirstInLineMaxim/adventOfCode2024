@@ -4,7 +4,7 @@ import { readFileFromPath } from "../utils/file";
  * Task : for each number in array1 count the appearance of it in array 2 ,
  * calculate the similiartiy score with number * count and sum it up
  *
- * Run : npm run day2
+ * Run : npm run day1:2
  */
 function buildInputArrays(fileContent: string): [Array<number>, Array<number>] {
 	const valueArray1: Array<number> = [];
