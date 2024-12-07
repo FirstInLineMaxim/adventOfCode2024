@@ -1,5 +1,11 @@
 import { readFileFromPath } from "../utils/file";
-
+/**
+ * Input.txt : a file Containing 1000 lines each line containing 2 numbers seperated with white space.
+ * Task : for each number in array1 count the appearance of it in array 2 ,
+ * calculate the similiartiy score with number * count and sum it up
+ *
+ * Run : npm run day2
+ */
 function buildInputArrays(fileContent: string): [Array<number>, Array<number>] {
 	const valueArray1: Array<number> = [];
 	const valueArray2: Array<number> = [];
@@ -25,7 +31,7 @@ function createSimilarityScoreArray(
 			return a;
 		}, 0);
 
-		similarityArray.push(countOfNumberInOtherArray);
+		similarityArray.push(currentNumber * countOfNumberInOtherArray);
 		index++;
 	}
 
@@ -61,7 +67,7 @@ function GptCreateSimiliarityScoreArray(
 	const similarityScores: number[] = [];
 	for (const num of inputArray1) {
 		const count = frequencyMap.get(num) || 0;
-		similarityScores.push(count);
+		similarityScores.push(num * count);
 		// Remove the number from the map after processing
 		frequencyMap.delete(num);
 	}
